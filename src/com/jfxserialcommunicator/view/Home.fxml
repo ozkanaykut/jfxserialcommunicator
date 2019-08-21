@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.StatusBar?>
+
+<AnchorPane fx:id="root" prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jfxserialcommunicator.controller.HomeController">
+   <children>
+      <BorderPane layoutX="220.0" layoutY="140.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <VBox prefHeight="70.0" prefWidth="640.0" style="-fx-background-color: dedede;" BorderPane.alignment="CENTER">
+               <children>
+                  <MenuBar>
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                              <Menu mnemonicParsing="false" text="Language">
+                                <items>
+                                <MenuItem fx:id="menuItemTurkish" mnemonicParsing="false" onAction="#changeLang" text="Turkish" />
+                                    <MenuItem fx:id="menuItemEnglish" mnemonicParsing="false" onAction="#changeLang" text="English" />
+                                    <MenuItem fx:id="menuItemRussian" mnemonicParsing="false" onAction="#changeLang" text="Russian" />
+                                </items>
+                              </Menu>
+                              <MenuItem mnemonicParsing="false" text="Delete" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+                  <HBox prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: fefefe;">
+                     <children>
+                        <Label fx:id="lblPort" prefHeight="27.0" prefWidth="40.0" text="Port" textFill="#514c4c">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="1.0" right="1.0" top="5.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cbPort" prefHeight="25.0" prefWidth="80.0">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="1.0" right="1.0" top="5.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <Label fx:id="lblBaund" prefHeight="27.0" prefWidth="55.0" text="Baund" textFill="#514c4c">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="1.0" right="1.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="cbBaund" layoutX="66.0" layoutY="15.0" prefHeight="25.0" prefWidth="80.0">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="1.0" right="1.0" top="5.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <Label fx:id="lblParity" layoutX="167.0" layoutY="15.0" prefHeight="27.0" prefWidth="55.0" text="Parity" textFill="#514c4c">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="1.0" right="1.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="cbParity" layoutX="229.0" layoutY="15.0" prefHeight="25.0" prefWidth="80.0">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="1.0" right="1.0" top="5.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <Label fx:id="lblDataBits" layoutX="272.0" layoutY="15.0" prefHeight="27.0" prefWidth="70.0" text="DataBits" textFill="#514c4c">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="1.0" right="1.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="cbDataBits" layoutX="321.0" layoutY="15.0" prefHeight="25.0" prefWidth="60.0">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="1.0" right="1.0" top="5.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <Label fx:id="lblStopBits" layoutX="403.0" layoutY="15.0" prefHeight="27.0" prefWidth="70.0" text="StopBits" textFill="#514c4c">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="1.0" right="1.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="cbStopBits" layoutX="469.0" layoutY="15.0" prefHeight="25.0" prefWidth="60.0">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="1.0" right="1.0" top="5.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <Button fx:id="btnConnect" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Connect">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <TextArea fx:id="txtConsole" prefHeight="200.0" prefWidth="200.0" style="-fx-highlight-fill: #4DE31A; -fx-highlight-text-fill: black; -fx-text-fill: #4DE31A; -fx-control-inner-background: black;" text="Terminal" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+         </center>
+         <bottom>
+            <StatusBar fx:id="statusBar" text="Durum Alanı" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

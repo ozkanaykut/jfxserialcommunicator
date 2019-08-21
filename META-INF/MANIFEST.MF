@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: libs/controlsfx-8.40.14.jar libs/ini4j-0.5.4.jar libs/jfoe
+ nix-8.0.8.jar libs/jSerialComm-2.5.1.jar
+Main-Class: com.jfxserialcommunicator.controller.Main
+
