@@ -25,7 +25,7 @@
                     <menus>
                       <Menu mnemonicParsing="false" text="File">
                         <items>
-                          <MenuItem mnemonicParsing="false" text="Close" />
+                              <MenuItem fx:id="menuItemClose" mnemonicParsing="false" onAction="#closeApplication" text="Close" />
                         </items>
                       </Menu>
                       <Menu mnemonicParsing="false" text="Edit">
@@ -37,7 +37,7 @@
                                     <MenuItem fx:id="menuItemRussian" mnemonicParsing="false" onAction="#changeLang" text="Russian" />
                                 </items>
                               </Menu>
-                              <MenuItem mnemonicParsing="false" text="Delete" />
+                              <MenuItem mnemonicParsing="false" text="Preferences" />
                         </items>
                       </Menu>
                       <Menu mnemonicParsing="false" text="Help">
@@ -129,7 +129,7 @@
                               <Insets bottom="5.0" left="1.0" right="1.0" top="5.0" />
                            </HBox.margin>
                         </ComboBox>
-                        <Button fx:id="btnConnect" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Connect">
+                        <Button fx:id="btnConnect" mnemonicParsing="false" onAction="#btnConnection_Click" prefHeight="25.0" prefWidth="111.0" text="Connect">
                            <HBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
